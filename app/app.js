@@ -23,6 +23,10 @@ angular.module("agaramApp",["home","student","donar","volunteer","header","ui.ro
           var milestoneObj={
              templateUrl:basePath+"milestones.html"
          };
+          var donorObj={
+             templateUrl:basePath+"donor.html"
+         };
+         
          
          $stateProvider.state("home",homeObj);
          $stateProvider.state("student",studentObj);
@@ -30,6 +34,8 @@ angular.module("agaramApp",["home","student","donar","volunteer","header","ui.ro
          $stateProvider.state("about",aboutObj);
          $stateProvider.state("contact",contactObj);
          $stateProvider.state("milestone",milestoneObj);
+         $stateProvider.state("donor",donorObj);
+
 
      }]);
 
