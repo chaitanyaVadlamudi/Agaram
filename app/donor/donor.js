@@ -1,4 +1,4 @@
 (function(){
     'use strict'
-    angular.module("donar",[]);
+    angular.module("donor",[]);
 })();

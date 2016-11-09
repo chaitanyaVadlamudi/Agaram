@@ -1,6 +1,6 @@
 (function(){
     'use strict'
-angular.module("agaramApp",["home","student","donar","volunteer","header","ui.router"]);
+angular.module("agaramApp",["home","student","donor","volunteer","header","gallery","ui.router","lookup"]);
   angular.module("agaramApp")
      .config([ "$stateProvider",function($stateProvider){
          var basePath ="app/templates/"
@@ -26,6 +26,9 @@ angular.module("agaramApp",["home","student","donar","volunteer","header","ui.ro
           var donorObj={
              templateUrl:basePath+"donor.html"
          };
+         var galleryObj={
+             templateUrl:basePath+"gallery.html"
+         };
          
          
          $stateProvider.state("home",homeObj);
@@ -35,6 +38,7 @@ angular.module("agaramApp",["home","student","donar","volunteer","header","ui.ro
          $stateProvider.state("contact",contactObj);
          $stateProvider.state("milestone",milestoneObj);
          $stateProvider.state("donor",donorObj);
+         $stateProvider.state("gallery",galleryObj);
 
 
      }]);
