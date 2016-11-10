@@ -31,6 +31,8 @@
   "devDependencies": {
     "angular-route": "^1.5.8",
     "angular-ui-router": "^0.3.1",
-    "angular-google-maps": "^2.4.0"
+    "angular-google-maps": "^2.4.0",
+    "angular-animate": "^1.5.8",
+    "ui-bootstrap": "^2.2.0"
   }
 }
