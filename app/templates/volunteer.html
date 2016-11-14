@@ -4,30 +4,41 @@
     <p>Agaram also provides individualistic attention to every student through the mentorship program, by connecting every student with a mentor, who is not a parent or a teacher but someone who believes in the importance of education and the student’s ability to achieve. You can become a Mentor, if you have the inclination and the time.</p>
     <p>We do have an elaborate selection process to understand how you can partner with us, so that we mutually benefit from the engagement. Selected Volunteers and Mentors are then put through a training process, before they are deployed to support our various initiatives.</p></div>
 <div class="col-md-6 pull-right">
-    <h2>Volunteers Registration</h2>
-    <form class="form-horizontal" ng-controller="volunteerCtrl">
+    <h2 style="color:brown">Volunteers Registration</h2>
+    <form class="form-horizontal" name="volunteer" ng-controller="volunteerCtrl" novalidate>
   <div class="form-group">
-    <label for="name" class="col-sm-2 control-label">Name</label>
+    <label for="name" class="col-sm-2 control-label" style="color:brown">Name</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name" ng-model="volunteerDetails.name" >
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name" ng-model="volunteerDetails.name" alphabets-only ng-required="true" ng-show-options="{update on:'blur'}">
+        <div  ng-show="volunteer.name.$dirty">
+            <p style="color:red" ng-show="volunteer.name.$error.required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Name required</p>
+        </div>
       </div>
         </div>
   <div class="form-group">
     <label for="email" class="col-sm-2 control-label">Email</label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email" ng-model="volunteerDetails.email">
+      <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email" ng-model="volunteerDetails.email" ng-required="true" ng-show-options="{update on:'blur'}" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/">
+        <div ng-show="volunteer.email.$dirty">
+            <p style="color:red" ng-show="volunteer.email.$error.required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Email id required</p>
+            <p style="color:red" ng-show="volunteer.email.$error.pattern"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Invalid Email</p>
+            </div>
     </div>
   </div>
   <div class="form-group">
     <label for="mobile" class="col-sm-2 control-label">Mobile</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Enter your Mobile number" ng-model="volunteerDetails.mobile">
+      <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Enter your Mobile number" ng-model="volunteerDetails.mobile" ng-required="true" ng-show-options="{update on:'blur'}">
+        <div ng-show="volunteer.mobile.$dirty">
+            <p style="color:red" ng-show="volunteer.mobile.$error.required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Mobile number required</p></div>
     </div>
   </div>
         <div class="form-group">
     <label for="dob" class="col-sm-2 control-label">Date of Birth</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="dob" name="DoB" placeholder="Enter your Date of Birth" ng-model="volunteerDetails.DoB">
+      <input type="text" class="form-control" id="dob" datepicker name="DoB" placeholder="Enter your Date of Birth" ng-model="volunteerDetails.DoB" ng-required="true" ng-show-options="{update on:'blur'}" datepicker mindate="-2M" maxdate="0">
+        <div ng-show="volunteer.DoB.$dirty">
+            <p style="color:red" ng-show="volunteer.DoB.$error.required"><i class="fa fa-exclamation-triangle" aria-hidden="true">Date of Birth required</i></p></div>
         </div>
     </div>
      <div class="form-group">
@@ -57,30 +68,36 @@
         </div>
          <div class="form-group">
              <label for="address" class="col-sm-2 control-label">Address</label>
-            <textarea class="form-control" rows="3" id="address" name="address" placeholder="Enter your Address" ng-model="volunteerDetails.address"></textarea>
+            <textarea class="form-control" rows="3" id="address" name="address" placeholder="Enter your Address" ng-model="volunteerDetails.address" ng-required="true" ng-show-options="{update on:'blur'}"></textarea>
+             <div ng-show="volunteer.address.$dirty">
+                 <p style="color:red" ng-show="volunteer.address.$error.required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Address is required</p></div>
     </div>
    <div class="form-group">
         <label for="education" class="col-sm-2 control-label">Education</label>
         <div class="col-sm-10">
-       <select class="form-control"  ng-model="volunteerDetails.education">
+       <select class="form-control"  ng-model="volunteerDetails.education" ng-required="true" ng-show-options="{update on:'blur'}">
     <option value="">Please select</option>
     <option value="ugArts" name="education" id="education">U.G arts and science</option>
     <option value="ugPd" name="education" id="education">U.G professional degree</option>
     <option value="pgA" name="education" id="education">P.G arts and science</option>
     <option value="ugA" name="education" id="education">P.G proffesional degree</option>
+           <div ng-show="volunteer.education.$dirty">
+               <p ng-show="volunteer.education.$error.required">Education is required</p></div>
 </select>
        </div>
         </div>
         <div class="form-group">
         <label for="occupation" class="col-sm-2 control-label">Occupation</label>
         <div class="col-sm-10">
-       <select class="form-control" ng-model="volunteerDetails.occupation">
+       <select class="form-control" ng-model="volunteerDetails.occupation" name="occupation" ng-required="true" ng-show-options="{update on:'blur'}">
     <option value="">Please select</option>
-    <option value="se" name="occupation" >Self employed</option>
-    <option value="e" name="occupation">Employed</option>
-    <option value="student" name="occupation">Student</option>
-    <option value="retired" name="occupation">Retired</option>
-    <option value="o" name="occupation">Others</option>
+    <option value="se">Self employed</option>
+    <option value="e">Employed</option>
+    <option value="student">Student</option>
+    <option value="retired">Retired</option>
+    <option value="o">Others</option>
+           <div ng-show="volunteer.occupation.$dirty">
+               <p ng-show="volunteer.occupation.$error.required">Occupation is required</p></div>
 </select>
             </div>
         </div>
@@ -94,10 +111,11 @@
         <div class="form-group">
                 <div class="col-sm-10">
 
-    <button type="button" class="btn btn-primary" ng-click="registerVolunteer()">Register</button>
+    <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top " title="Register" ng-click="registerVolunteer()">Register</button>
         </div>
 </div>
     </form>
     
     </div>
 </div>
+<pre>{{volunteerDetails}}</pre>
