@@ -48,3 +48,14 @@
         }
         
     }]);
+angular.module("components")
+.directive('stopccp', [function(){
+    return {
+        scope: {},
+        link:function(scope,element){
+            element.on('cut copy paste', function (event) {
+              event.preventDefault();
+            });
+        }
+    };
+}]);

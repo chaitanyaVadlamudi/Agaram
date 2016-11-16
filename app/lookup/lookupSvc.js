@@ -150,14 +150,8 @@
       code: "NV",
       countryCode: "US"
       }
-]
-this.getStateListByCountry = function (code) {
-            //filter the states by country.
-            var stateList = _.where(states, {
-                countryCode: code
-            });
-            return stateList;
-        };
+];
+
        
         this.getCountriesFromApi = function () {
             var dfd = $q.defer();
@@ -170,6 +164,13 @@ this.getStateListByCountry = function (code) {
                 });
 
             return dfd.promise;
+        };
+        this.getStateListByCountry = function (code) {
+            //filter the states by country.
+            var stateList = _.where(states, {
+                countryCode: code
+            });
+            return stateList;
         };
     }
     angular.module("lookup")

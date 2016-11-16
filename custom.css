@@ -9,3 +9,6 @@ body{
 th,label,strong{
     color: brown
 }
+.table-bordered td, .table-bordered th, .table-bordered{
+    border-color: brown !important
+}
