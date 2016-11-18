@@ -1,6 +1,6 @@
 (function(){
     'use strict'
-angular.module("agaramApp",["home","student","donor","volunteer","header","gallery","components","ui.router","lookup"]);
+angular.module("agaramApp",["home","student","donor","volunteer","header","gallery","components","ui.router","lookup","contact"]);
   angular.module("agaramApp")
      .config([ "$stateProvider",function($stateProvider){
          var basePath ="app/templates/"

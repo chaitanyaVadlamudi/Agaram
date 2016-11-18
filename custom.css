@@ -12,3 +12,6 @@ th,label,strong{
 .table-bordered td, .table-bordered th, .table-bordered{
     border-color: brown !important
 }
+.form-control{
+    background-color: lavenderblush
+}

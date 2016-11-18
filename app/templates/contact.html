@@ -16,30 +16,42 @@
     </div>
     <div class="col-md-6 pull-right">
         <h3 style="color:brown">For quick response</h3>
-<form class="form-horizontal">
+<form class="form-horizontal" ng-controller="contactCtrl" name="query">
   <div class="form-group">
     <label for="Name" class="col-sm-2 control-label">Name</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="name" placeholder=" Enter Your Name">
+      <input type="text" class="form-control" alphabets-only id="name" name="name" placeholder=" Enter Your Name" ng-model="queryDetails.name" ng-required="true" stopccp>
+        <div ng-show="query.name.$dirty">
+        <p style="color:red" ng-show="query.name.$error.required"><i class="fa fa-exclamation-triangle"></i>Name is required</p></div>
     </div>
   </div>
   <div class="form-group">
     <label for="email" class="col-sm-2 control-label">Email</label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="email" placeholder=" Enter Your Email">
+      <input type="email" class="form-control" id="email" placeholder=" Enter Your Email" name="email" ng-model="queryDetails.email" ng-required="true" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" stopccp>
+        <div ng-show="query.email.$dirty">
+        <p style="color:red" ng-show="query.email.$error.required"><i class="fa fa-exclamation-triangle"></i>Email id is required</p>
+        <p style="color:red" ng-show="query.email.$error.pattern"><i class="fa fa-exclamation-triangle"></i>Invalid Email</p></div>
     </div>
     </div>
         <div class="form-group">
-    <label for="Phone" class="col-sm-2 control-label">Phone</label>
+    <label for="Phone" class="col-sm-2 control-label">Mobile</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="email" placeholder=" Enter Your Phone number">
+      <input type="text" class="form-control" name="mobile" id="mobile" placeholder=" Enter Your Mobile number" ng-model="queryDetails.mobile" ng-required="true" ng-pattern="/^[0-9]*$/" ng-minlength="10" ng-maxlength="10" stopccp>
+        <div ng-show="query.mobile.$dirty">
+        <p style="color:red" ng-show="query.mobile.$error.required"><i class="fa fa-exclamation-triangle"></i>Mobile number is required</p>
+        <p style="color:red" ng-show="query.mobile.$error.pattern"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Enter numbers only</p>
+            <p style="color:red" ng-show="query.mobile.$error.maxlength"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Please enter valid mobile number</p></div>
     </div>
     </div>
         <div class="form-group">
              <label for="comment" class="col-sm-2 control-label">Comment</label>
-            <textarea class="form-control" rows="3" id="comment" placeholder="Enter your Query"></textarea>
+            <textarea class="form-control" rows="3" id="comment" name="query" placeholder="Enter your Query" ng-model="queryDetails.query" ng-required="true" ng-maxlength="200" stopccp></textarea>
+           <div ng-show="query.query.$dirty">
+        <p style="color:red" ng-show="query.query.$error.required"><i class="fa fa-exclamation-triangle"></i>Query is required</p>
+            <p style="color:red" ng-show="query.query.$error.maxlength"><i class="fa fa-exclamation-triangle"></i>Only 200 characters allowed</p></div>
     </div>
-    <button type="button" class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-primary" ng-click="registerQuery()" ng-disabled="!query.name.$prestine && query.name.$invalid || !query.email.$prestine && query.email.$invalid || !query.mobile.$prestine && query.mobile.$invalid || !query.query.$prestine && query.query.$invalid">Submit</button>
 
 </form>
 </div></div>
