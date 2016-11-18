@@ -15,3 +15,9 @@ th,label,strong{
 .form-control{
     background-color: lavenderblush
 }
+input.ng-touched.ng-invalid,textarea.ng-touched.ng-invalid,select.ng-touched.ng-invalid {
+   border-color:red
+}
+input.ng-valid,textarea.ng-touched.ng-valid,select.ng-touched.ng-valid{
+    background-color: palegreen
+}
