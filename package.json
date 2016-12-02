@@ -1,0 +1,25 @@
+{
+  "name": "agaram",
+  "version": "1.0.0",
+  "description": "A website for Agaram foundation which supports the education of poor children.",
+  "main": "index.js",
+  "dependencies": {
+    "bower": "^1.7.9"
+  },
+  "devDependencies": {
+    "angular-datepicker": "^1.0.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/www.github.com/chaitanyaVadlamudi.git"
+  },
+  "author": "chaitanya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/www.github.com/chaitanyaVadlamudi/issues"
+  },
+  "homepage": "https://github.com/www.github.com/chaitanyaVadlamudi#readme"
+}

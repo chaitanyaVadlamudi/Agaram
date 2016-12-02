@@ -1,0 +1,38 @@
+{
+  "name": "agaram",
+  "description": "A website for Agaram foundation which supports the education of poor children.",
+  "main": "index.js",
+  "authors": [
+    "chaitanya"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "suriya",
+    "agaram",
+    "suriyafoundation"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-translate": "^2.12.1",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.6.3",
+    "gulp": "^3.9.1",
+    "angular": "^1.5.8",
+    "js": "^5.9.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "angular-route": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "angular-google-maps": "^2.4.0",
+    "angular-animate": "^1.5.8",
+    "ui-bootstrap": "^2.2.0"
+  }
+}

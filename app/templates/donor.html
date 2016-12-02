@@ -1,0 +1,204 @@
+<div class="modal-body row">
+    <div class="col-md-4 pull-left">
+    <p>The two successful key initiatives ofAgaram <span style="color:cyan">"Vidhai"</span> and <span style="color:cyan">"Vazhikatigal"</span> have benefitted hundreds of students in the rural parts of Tamilnadu, bringing about a significant change in their lives. Agaram is also planning to build a "Learning Center" to provide extensive training for the students.</p>
+    <p>With strong support from people like you, Agaram is hopeful that its efforts will snow-ball and many more children will benefit from its initiative in the coming years.</p>
+    <div>
+        <table class = "table table-bordered">
+   <caption style="color:brown">Funds received by Agaram via FCRA</caption>
+   
+   <thead>
+      <tr>
+         <th>Name & Address</th>
+         <th>Date & Month of Receipts</th>
+         <th>Amount<br>(in rupees)</th>
+      </tr>
+   </thead>
+   
+   <tbody>
+      <tr>
+         <td>Globelink West Star Shipping L.L.C
+P.O. Box 6027, Dubai, United Arab Emirates </td>
+         <td>31 Dec 2015 </td>
+         <td>4,47,518</td>
+      </tr>
+      
+      <tr>
+         <td>Muthtamil Sangam Inc, P.O. Box 96105,
+Balmoral 1342, Auckland. </td>
+         <td>14 march 2016 </td>
+         <td>5,83,094.37</td>
+      </tr>
+      
+      <tr>
+         <td>CINEGALAXY INC, 3905 RUTHRIDGE DR PLANO TX
+750747785</td>
+         <td>03 june 2016</td>
+         <td>5,08,519.01</td>
+      </tr>
+   </tbody>
+   
+</table></div></div>
+    <div class="col-md-4 pull-center">
+        <h1 style="color:chartreuse">Our partners</h1>
+    <ul>
+        <strong style="color:brown"><i class="fa fa-graduation-cap fa-lg"></i>Educational Institutions</strong>
+        <li>Aarupadai Veedu Institute of Technology – Chennai</li>
+        <li>Apollo Group of Educational institutions – Chennai</li>
+        <li>Apollo Hospitals - College of Nursing – Chennai</li>
+        <li>Dr. M.G.R University - Chennai</li>
+        <li>Hindustan College of Arts & Science - Coimbatore</li>
+        <li>MAM Group of Institutions - Trichy</li>
+        <li>PSNA College of Engineering and Technology – Dindigul</li>
+        <li>Rajalakshmi Institutions – Chennai</li>
+        <li>Roever Engineering College – Perambalur</li>
+        <li>RVS College of Arts & Science - Coimbatore</li>
+        <li>Sairam Group of Institutions</li>
+        <li>Sathyabama University- Chennai</li>
+        <li>Sri Krishna & VLB Institutions – Coimbatore</li>
+        <li>SRM University - Chennai</li>
+        <li>Vellore Institute of Technology – Vellore</li>
+        <li>Venkataeswara Hospitals – Chennai</li>
+        <li>Vels University – Chennai</li>
+        </ul>
+        <ul>
+        <strong style="color:brown"><i class="fa fa-heart fa-lg"></i>Patrons</strong>
+            <li>NAPC Properties Ltd – Chennai</li>
+             <li>Ramraj Cotton - Tiruppur</li>
+             <li>Sakthi Masala – Erode</li>
+             <li>Saravana Stocks Pvt Ltd - Chennai</li>
+             <li>Star Vijay TV</li>
+             <li>Watertec (India) Pvt Ltd– Coimbatore</li>
+             <li>Bank of India - Educational Loan Assistance</li>
+        </ul>
+        <ul style="list-style:none"><strong style="color:brown"><i class="fa fa-briefcase fa-lg">Corporate Partners</i></strong>
+        <li><span style="color:cyan">Ford</span> has come forward to lend its support f or Agaram’s initiatives by providing, volunteers, Mentors, Internship and Training Opportunities for Agaram Beneficiaries.</li>
+        </ul>
+        <ul>
+        <strong style="color:brown"><i class="fa fa-desktop fa-lg"></i>Training Partners</strong>
+            <li>Dream Chasers – Chennai</li>
+             <li>Rane Group – Chennai</li>
+             <li>Shankar IAS Academy – Chennai</li>
+             <li>SMART's Institute for Career Assurance – Chennai</li>
+             <li>The ABK - AOTS DOSOKAI – Chennai</li>
+             <li>Worldwide Education - Salem</li>
+        </ul>
+    </div>
+    <div class="col-md-4 pull-right">
+    <h2>Donors Registration</h2>
+    <form class="form-horizontal" name="donor" ng-controller="donorCtrl" novalidate>
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="name" stopccp name="name" placeholder="Enter your Name" ng-model="donorDetails.name" alphabets-only ng-required="true" ng-show-options="{update on:'blur'}">
+        <div  ng-show="donor.name.$dirty">
+            <p style="color:red" ng-show="donor.name.$error.required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Name required</p>
+        </div>
+      </div>
+        </div>
+  <div class="form-group">
+    <label for="email" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="email" stopccp name="email" ng-model="donorDetails.email" placeholder="Enter your Email" ng-required="true" ng-show-options="{update on:'blur'}" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/">
+        <div  ng-show="donor.email.$dirty">
+            <p style="color:red" ng-show="donor.email.$error.required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Email required</p>
+            <p style="color:red" ng-show="donor.email.$error.pattern"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Invalid Email</p>
+        </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="mobile" class="col-sm-2 control-label">Mobile</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="mobile" stopccp name="mobile" ng-model="donorDetails.mobile" placeholder="Enter your Mobile number" ng-required="true" ng-pattern="/^[0-9]*$/" ng-minlength="10" ng-maxlength="10">
+        <div  ng-show="donor.mobile.$dirty">
+            <p style="color:red" ng-show="donor.mobile.$error.required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Mobile number required</p>
+             <p style="color:red" ng-show="donor.mobile.$error.pattern"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Enter numbers only</p>
+            <p style="color:red" ng-show="donor.mobile.$error.maxlength"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Please enter valid mobile number</p>
+        </div>
+    </div>
+  </div>
+     <div class="form-group">
+            <label for="gender" class="col-sm-2 control-label">Gender</label>
+            <div class="col-sm-10">
+                <input type="radio" value="M" id="gender" name="gender" ng-model="donorDetails.gender" ng-required="true">Male<br>
+                <input type="radio" value="F" id="gender" name="gender" ng-model="donorDetails.gender" ng-required="true">Female<br>
+                <input type="radio" value="TG" id="gender" name="gender" ng-model="donorDetails.gender" ng-required="true">Trans Gender
+                <div ng-show="donor.gender.$dirty">
+                <p ng-show="donor.gender.$error.required">Gender is required</p></div>
+            </div>
+        </div>
+         <div class="form-group">
+            <label for="country" class="col-sm-2 control-label">Country</label>
+            <div class="col-sm-10">
+                <select class="form-control" ng-change="loadStatesByCountry()" name="country" ng-model="donorDetails.country" ng-options="country.name for country in countries">
+                    <option value="">Please Select</option>
+                    <div ng-show="donor.country.$dirty">
+                    <p ng-show="donor.country.$error.required">country is required</p></div>
+                </select>
+            </div>
+        </div>
+    <div class="form-group">
+            <label for="state" class="col-sm-2 control-label">State</label>
+            <div class="col-sm-10">
+                <select class="form-control" name="state" ng-model="donorDetails.state" ng-options="state.name for state in states" ng-required="true">
+                    <option value="">Please Select</option>
+                    <div ng-show="donor.state.$dirty">
+                    <p ng-show="donor.state.$error.required">state is reuired</p></div>
+                </select>
+            </div>
+        </div>
+         <div class="form-group">
+             <label for="address" class="col-sm-2 control-label">Address</label>
+            <textarea class="form-control" rows="3" stopccp id="address" name="address" ng-model="donorDetails.address" placeholder="Enter your Address" ng-required="true"></textarea>
+             <div  ng-show="donor.address.$dirty">
+            <p style="color:red" ng-show="donor.address.$error.required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Address required</p>
+        </div>
+    </div>
+   <div class="form-group">
+        <label for="education" class="col-sm-2 control-label">Education</label>
+        <div class="col-lg-12">
+       <select class="form-control" name="education" ng-model="donorDetails.education" ng-required="true">
+    <option value="">Please select</option>
+    <option value="UA">U.G arts and science</option>
+    <option value="UPD">U.G professional degree</option>
+    <option value="PA">P.G arts and science</option>
+    <option value="PPD">P.G proffesional degree</option>
+           <div  ng-show="donor.eduction.$dirty">
+            <p style="color:red" ng-show="donor.education.$error.required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Education required</p>
+        </div>
+</select>
+       </div>
+        </div>
+        <div class="form-group">
+        <label for="occupation" class="col-sm-2 control-label">Occupation</label>
+        <div class="col-lg-12">
+       <select class="form-control" ng-model="donorDetails.occupation" ng-required="true" name="occupation">
+    <option value="">Please select</option>
+    <option value="SE">Self employed</option>
+    <option value="E">Employed</option>
+    <option value="student">Student</option>
+    <option value="retired">Retired</option>
+    <option value="others">Others</option>
+           <div  ng-show="donor.occupation.$dirty">
+            <p style="color:red" ng-show="donor.occupation.$error.required"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Occupation required</p>
+        </div>
+</select>
+            </div>
+        </div>
+        <div class="form-group">
+             <label for="additional" class="col-sm-2 control-label">Additional details</label>
+            <textarea class="form-control" rows="3" stopccp id="additional" name="additional" ng-model="donorDetails.additional" placeholder="How you know about Agaram?" ng-required="true" ng-maxlength="200"></textarea>
+            <div ng-show="donor.additional.$dirty">
+            <p ng-show="donor.additional.$error.required" style="color:red"><i class="fa fa-exclamation-triangle"></i>Answer is required</p>
+            <p ng-show="donor.additional.$error.maxlength" style="color:red"><i class="fa fa-exclamation-triangle"></i>Only 200 chararacters are allowed</p></div>
+    </div>
+        <div class="form-group">
+                <div class="col-sm-10">
+
+<button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top " title="Register" ng-click="registerDonor()" ng-disabled="!donor.name.$prestine && donor.name.$invalid || !donor.email.$prestine && donor.email.$invalid || !donor.mobile.$prestine && donor.mobile.$invalid || !donor.address.$prestine && donor.address.$invalid || !donor.gender.$prestine && donor.gender.$invalid || !donor.occupation.$prestine && donor.occupation.$invalid || !donor.education.$prestine && donor.education.$invalid  || !donor.country.$prestine && donor.country.$invalid  || !donor.state.$prestine && donor.state.$invalid  || !donor.additional.$prestine && donor.additional.$invalid">Register</button>
+        </div>
+</div>
+        
+    </form>
+    
+    </div>
+</div>
